@@ -1,9 +1,9 @@
 
 
-<h1 align="center"># Projeto LP inglês </h1>
+<h1 align="center"># Projeto LP Descomplix</h1>
 t
 <h1 align="center">
-    <a href="https://wagstalos.github.io/lp-curso-ingles/">🔗 link  do projeto</a>
+    <a href="">🔗 link  do projeto</a>
 </h1>
 
 ## Descrição do Projeto
@@ -17,7 +17,7 @@ t
 
 ### Features
 
-- [x] Treinar SASS
+- [x] SASS
 - [X] Mixins
 - [X] Mixins com argumentos
 - [x] Site sem framework
