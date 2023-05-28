@@ -1,0 +1,70 @@
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6.9rem;
+    background: rgba( 255, 255, 255, 0.35 );
+    //box-shadow: 0 2px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    z-index: 2;
+    .container{
+        @include flex(row, center , space-between )
+    }
+    nav{
+        ul{
+            display: flex;
+            align-items: center;
+            li{
+                &:not(:first-child){
+                    margin-left: 5.6rem;
+                }
+
+                &:last-child{
+                    background-color: $green;
+                    color: $white!important;
+                    padding: 15px;
+                    border-radius: 20px;
+                }
+               a,button{
+                display: flex;
+                align-items: center;
+                color: $blue-dark;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                background-color: transparent;
+                cursor: pointer;
+                img{
+                    margin-right: $gutter;
+                }
+             
+                span{
+                    font-size: 1.6rem;
+                    line-height: 1.9rem;
+                    color: $white;
+                }
+               }
+               button{
+                color: white;
+               }
+            }
+        }
+    }
+    @include responsive(600px){
+        .container{
+           justify-content: center;
+        }
+        nav{
+            display: none;
+        }
+    }
+    @include responsive (480px){
+        height: 7rem;
+        .logo{
+            max-width: 140px;
+        }
+    }
+}
