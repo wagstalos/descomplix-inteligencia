@@ -4,6 +4,10 @@
     padding-top: 3.9rem;
     border-radius: 40px;
 
+    .container {
+        @include flex(row, flex-start, space-between);
+    }
+
     .stamp {
         position: absolute;
         top: 40%;
@@ -39,10 +43,6 @@
         }
     }
 
-    .container {
-        @include flex(row, flex-start, space-between);
-    }
-
     .text {
         width: 100%;
         max-width: 60rem;
@@ -64,6 +64,7 @@
             max-width: 58rem;
             margin-bottom: 3.2rem;
         }
+
         button {
             @include style-btn(5.4rem, $green, $white);
             margin-bottom: 8.6rem;
@@ -72,11 +73,27 @@
             -moz-box-shadow: 3px 7px 19px -6px rgba(136, 189, 247, 1);
             box-shadow: 3px 7px 19px -6px rgba(136, 189, 247, 1);
         }
+
+        ul {
+            display: flex;
+            font-size: 1.6rem;
+            color: $blue-dark;
+
+            li {
+                strong {
+                    font-size: 3rem;
+                }
+
+                margin-right: $gutter * 6;
+            }
+        }
     }
+
     .image {
         position: relative;
         top: 0.4rem;
     }
+
     @include responsive(991px) {
         .container {
             flex-direction: column;
@@ -111,9 +128,23 @@
         padding-top: 2.5rem;
         margin: 0.9rem;
         margin-top: 7rem;
+
         .text {
             h1 {
                 font-size: 3.5rem;
+            }
+
+            ul {
+                align-items: center;
+                justify-content: center;
+
+                li {
+                    margin-right: $gutter*3;
+                    text-align: center;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
             }
         }
         .image {
@@ -402,7 +433,7 @@
                 width: 100%;
                 text-align: center;
             }
-            
+
             .s-time__img {
                 img {
                     margin-left: 0;
@@ -429,7 +460,7 @@
 .s-testimonial {
     @include padding-section(2.9rem, 6.9rem);
     background-color: $blue-light;
-    background: radial-gradient(circle, rgba(181, 219, 239, 08) 0%,  rgba(70, 255, 226, 0.2) 86%);
+    background: radial-gradient(circle, rgba(181, 219, 239, 08) 0%, rgba(70, 255, 226, 0.2) 86%);
     text-align: center;
     .container {
         padding: 3rem;
@@ -644,9 +675,9 @@ footer {
         padding: 8px 12px;
         border-radius: 100%;
         cursor: pointer;
-        
+
         box-shadow: 3px 7px 19px -6px #88bdf7;
-        svg{
+        svg {
             margin-top: 2px;
         }
     }
