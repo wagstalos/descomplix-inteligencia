@@ -11,7 +11,7 @@
 
     .rotate {
         position: absolute;
-        left: 50%;
+        left: 52%;
         width: 120px;
         height: 120px;
         margin: -60px 0 0 -60px;
@@ -56,12 +56,12 @@
             color: $blue-dark;
             margin-bottom: 1.6rem;
         }
-        
+
         p {
             font-size: 1.8rem;
             line-height: 150%;
             color: $blue-dark;
-            max-width: 48.8rem;
+            max-width: 58rem;
             margin-bottom: 3.2rem;
         }
         button {
@@ -113,7 +113,7 @@
         margin-top: 7rem;
         .text {
             h1 {
-                font-size: 4.3rem;
+                font-size: 3.5rem;
             }
         }
         .image {
@@ -144,7 +144,7 @@
         content: "";
         position: absolute;
         top: 0;
-        width: 160px;
+        width: 140px;
         height: 100%;
         z-index: 2;
     }
@@ -175,6 +175,7 @@
     .iframe-container {
         display: flex;
         justify-content: center;
+
         iframe {
             border-radius: 20px;
             display: flex;
@@ -187,6 +188,13 @@
             height: 600px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        @include responsive(600px) {
+            iframe {
+                width: 100%;
+                height: 500px;
+            }
         }
     }
 
@@ -215,7 +223,7 @@
         background: linear-gradient(90deg, $blue 0%, $green 100%);
         margin: 50px auto 0;
 
-        border-radius: 2px
+        border-radius: 2px;
     }
 
     .top {
@@ -349,6 +357,7 @@
                 margin-top: 29px;
                 margin-left: 5%;
             }
+
             .s-time__img--box-azul {
                 position: absolute;
                 background-color: $blue-light;
@@ -358,8 +367,8 @@
                 z-index: 0;
             }
         }
-        .s-time__text {
 
+        .s-time__text {
             small {
                 color: $purple;
                 font-size: 1.4rem;
@@ -370,25 +379,30 @@
 
             h2 {
                 @include sub-title();
-                margin:( $gutter * 2) 0;
+                margin: ($gutter * 2) 0;
             }
 
             button {
                 @include style-btn(5rem, $purple, #f6f6f6);
                 margin-top: 4.6rem;
                 color: $white;
+
+                box-shadow: 3px 7px 19px -6px #88bdf7;
             }
         }
     }
 
     @include responsive(800px) {
         @include padding-section(2.9rem, 6.9rem);
+
         .s-time__flex {
             @include flex(column, center, space-between);
+
             div {
                 width: 100%;
                 text-align: center;
             }
+            
             .s-time__img {
                 img {
                     margin-left: 0;
@@ -414,22 +428,26 @@
 
 .s-testimonial {
     @include padding-section(2.9rem, 6.9rem);
-
+    background-color: $blue-light;
+    background: radial-gradient(circle, rgba(181, 219, 239, 08) 0%,  rgba(70, 255, 226, 0.2) 86%);
+    text-align: center;
     .container {
         padding: 3rem;
-        background-color: $blue-light;
+        // background-color: $blue-light;
         border-radius: 40px;
     }
 
     .tag {
         color: $purple;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         margin-top: 3.9rem;
     }
+
     .cards {
         display: flex;
         margin-bottom: 3.9rem;
     }
+
     .card {
         background-color: $white;
         border-radius: 20px;
@@ -438,11 +456,12 @@
         margin-left: $gutter;
         margin-right: $gutter;
         padding-bottom: $gutter;
+
         img {
             margin-top: -20px;
             width: 50px;
             border-radius: 100%;
-            border: 5px solid $blue-light;
+            border: 4px solid $blue-light;
         }
 
         p {
@@ -615,15 +634,21 @@ footer {
     h4 {
         color: rgba($white, 0.9);
     }
+
     .btn-whats {
         position: fixed;
         bottom: 20px;
         z-index: 10;
         right: 20px;
         background-color: #4ddd53;
-        padding: 8px 10px;
+        padding: 8px 12px;
         border-radius: 100%;
         cursor: pointer;
+        
+        box-shadow: 3px 7px 19px -6px #88bdf7;
+        svg{
+            margin-top: 2px;
+        }
     }
 
     @include responsive(800px) {

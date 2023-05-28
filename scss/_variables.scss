@@ -1,14 +1,14 @@
 $white: #fff;
 $purple: #3153e7;
-$yellow: #FFBF00;
-$green: #46F8A3;
+$yellow: #ffbf00;
+$green: #46f8a3;
 $gray-01: #453f51;
-$gray-02: #5E5570;
-$blue: #35C0ED;
-$blue-light: #35C0ED;
-$blue-dark: #381F6E;
-$blue-light: #DBEFFA;
-$red: #FF5757;
+$gray-02: #5e5570;
+$blue: #35c0ed;
+$blue-light: #7ed7f5;
+$blue-dark: #381f6e;
+$blue-light: #dbeffa;
+$red: #ff5757;
 $black: #000;
 $bg: #fff;
 $text: #7288a2;
@@ -18,6 +18,6 @@ $lightgray: #e5e5e5;
 $gutter: 8px;
 $border-radius: 4px;
 
-*{
-    --swiper-navigation-size: 15px!important;
+* {
+    --swiper-navigation-size: 15px !important;
 }
