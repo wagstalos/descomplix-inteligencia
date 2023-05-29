@@ -685,6 +685,14 @@
     transition: all 0.4s;
     z-index: 3;
 
+    #btn-submit:disabled {
+        background-color: rgb(240, 240, 240);
+        color: $gray-01;
+        &:hover {
+            color: $white;
+        }
+    }
+
     h2 {
         margin-bottom: $gutter * 3;
         font-size: 2rem;

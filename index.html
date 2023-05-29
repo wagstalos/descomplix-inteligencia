@@ -71,7 +71,7 @@
             </a>
           </li>
           <li>
-            <button type="button" class="btn">Entre em contato</button>
+            <a href="#" type="button" class="btn btn-highlight">Fale conosco</a>
           </li>
         </ul>
       </nav>
@@ -147,29 +147,32 @@
       <ul>
         <li>
           <div>
-           
+
             <h2 class="s-motives-numbers gradient">1<b>.</b></h2>
             <h3>Reduzimos impostos</h3>
           </div>
           <p>95% das empresas que promovem saúde em regime de lucro presumido pagam mais impostos do que deveriam.</p>
         </li>
         <li>
-         
+
           <h2 class="s-motives-numbers gradient">2<b>.</b></h2>
           <h3>Benefício imediato</h3>
-          <p>Pessoas jurídicas voltados à promoção de saúde, obtém o benefício fiscal, impactando em uma redução de 5,4% em tributos mensais.</p>
+          <p>Pessoas jurídicas voltados à promoção de saúde, obtém o benefício fiscal, impactando em uma redução de 5,4%
+            em tributos mensais.</p>
         </li>
         <li>
-         
+
           <h2 class="s-motives-numbers gradient">3<b>.</b></h2>
           <h3>Recupere dinheiro </h3>
-          <p>Trabalhamos com o conceito TAX BACK. Recuperação, em dinheiro, de impostos pagos a mais nos últimos cinco anos.</p>
+          <p>Trabalhamos com o conceito TAX BACK. Recuperação, em dinheiro, de impostos pagos a mais nos últimos cinco
+            anos.</p>
         </li>
         <li>
-         
+
           <h2 class="s-motives-numbers gradient">4<b>.</b></h2>
           <h3>Nós garantimos</h3>
-          <p> Processo 100% administrativo, sem riscos para sua empresa e apenas com legislações e normativas já existentes.</p>
+          <p> Processo 100% administrativo, sem riscos para sua empresa e apenas com legislações e normativas já
+            existentes.</p>
         </li>
       </ul>
     </div>
@@ -330,17 +333,18 @@
       <h2>Nós entraremos em contato com você!</h2>
       <form id="myForm">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+        <input class="campo" type="text" id="nome" name="nome" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input class="campo" type="email" id="email" name="email" required>
 
         <label for="telefone">Celular:</label>
-        <input class="telefone" type="text" id="telefone" name="celular" required>
-
-        <!-- <input id="enviar" type="submit" value="Enviar"> -->
+        <input class="campo" class="telefone" type="text" id="telefone" name="celular" required>
+        <!-- 
+        <input id="enviar" type="submit" value="Enviar"> -->
+        <button id="btn-submit" onclick='SubForm()' disabled>Preencha os campos </button>
       </form>
-      <button onclick='SubForm()'>Enviar</button>
+      <!-- <button onclick='SubForm()'>Enviar</button> -->
       <p class="success">Recebemos seu contato obrigado :)</p>
       <p class="error">Tivemos um probleminha tente novamente :(</p>
 

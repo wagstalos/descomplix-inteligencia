@@ -13,7 +13,7 @@ function start() {
 
   $(".success").hide();
   $(".error").hide();
-  $('#telefone').mask('(00) 90000-0000');
+  $("#telefone").mask("(00) 90000-0000");
 }
 
 function swiperHome() {
@@ -130,6 +130,30 @@ function gtm() {
   btn[1].addEventListener("click", gtmClickBtn);
   btnWhats[0].addEventListener("click", gtmClickBtnWhats);
 }
+
+//modal
+
+// $('.btn').on('click', function(){
+//   //$("#demo-modal").show();
+//   $('.campo').val('');
+// })
+
+$(".campo").keyup(function () {
+  var preenchido = true;
+  $(".campo").each(function () {
+    if ($(this).val() === "") {
+      preenchido = false;
+    }
+  });
+
+  if (preenchido) {
+    $("#btn-submit").prop("disabled", false);
+    $("#btn-submit").text("Enviar");
+  } else {
+    $("#btn-submit").prop("disabled", true);
+    $("#btn-submit").text("Preencha os campos");
+  }
+});
 
 function SubForm() {
   $.ajax({
