@@ -10,6 +10,10 @@ function start() {
       });
     });
   });
+
+  $(".success").hide();
+  $(".error").hide();
+  $('#telefone').mask('(00) 90000-0000');
 }
 
 function swiperHome() {
@@ -125,6 +129,32 @@ function gtm() {
   btn[0].addEventListener("click", gtmClickBtnPurple);
   btn[1].addEventListener("click", gtmClickBtn);
   btnWhats[0].addEventListener("click", gtmClickBtnWhats);
+}
+
+function SubForm() {
+  $.ajax({
+    url: "https://api.apispreadsheets.com/data/e0NJgxlQcdVr1uYf/",
+    type: "post",
+    data: $("#myForm").serializeArray(),
+    success: function () {
+      console.log("Form Data Submitted :)");
+      $(".success").show();
+      $("#demo-modal").show();
+      setTimeout(function () {
+        $(".success").hide();
+        $("#demo-modal").hide();
+      }, 5000);
+    },
+    error: function () {
+      console.log("There was an error :(");
+      $(".error").show();
+
+      setTimeout(function () {
+        $(".error").hide();
+        $("#demo-modal").hide();
+      }, 5000);
+    },
+  });
 }
 
 const init = () => {

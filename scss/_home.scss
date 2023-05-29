@@ -122,6 +122,26 @@
                 max-width: 100%;
                 text-align: center;
             }
+
+            ul {
+                align-items: center;
+                justify-content: center;
+
+                li {
+                    margin-right: $gutter * 3;
+                    text-align: center;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            a {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+            }
+
             button {
                 margin: 0 auto;
                 margin-bottom: 4rem;
@@ -526,11 +546,12 @@
 }
 
 .s-faq {
-    @include padding-section(2.9rem, 6.9rem);
+    @include padding-section(6.9rem, 6.9rem);
 
     h2 {
         @include sub-title();
         margin-bottom: $gutter * 2;
+        text-align: center;
     }
 
     .accordion {
@@ -606,9 +627,10 @@
             }
             + .accordion-content {
                 opacity: 1;
-                max-height: 9em;
+                max-height: 15em;
                 transition: all 200ms linear;
                 will-change: opacity, max-height;
+                margin-bottom: $gutter;
             }
         }
         .accordion-content {
@@ -619,6 +641,10 @@
             will-change: opacity, max-height;
         }
     }
+}
+
+#demo-modal{
+    position: fixed;
 }
 
 .modal {
@@ -639,6 +665,7 @@
     h2 {
         margin-bottom: $gutter * 3;
         font-size: 2rem;
+        max-width: 80%;
     }
 
     label {
@@ -649,8 +676,9 @@
     input {
         width: 100%;
         border: solid rgb(212, 212, 212) 1px;
-        padding: 5px;
+        padding: 8px;
         border-radius: 5px;
+        background-color: #f7f7f7;
     }
 
     button {
@@ -711,6 +739,7 @@ footer {
     background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
     color: $white;
     padding: 40px 0;
+
     .col-1 {
         width: 50%;
 
@@ -777,6 +806,17 @@ footer {
         box-shadow: 3px 7px 19px -6px #88bdf7;
         svg {
             margin-top: 2px;
+        }
+    }
+
+    ul{
+        li{
+            a{
+                color: $white;
+                &:hover{
+                    color: $green;
+                }
+            }
         }
     }
 
