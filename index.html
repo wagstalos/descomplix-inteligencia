@@ -91,13 +91,17 @@
       <img class="stamp rotate" src="img/selo.svg" alt="selo curso de inglês">
       <div class="text">
 
+        <small>Somos uma equipe de especialistas em tributação</small>
         <h1>Inteligência Tributária na Área Médica!
         </h1>
-        <p>Somos uma equipe de especialistas em tributação e profissionais da área médica que se uniram para oferecer
+        <p>Profissionais da área médica que se uniram para oferecer
           soluções inovadoras e eficientes para lidar com os desafios tributários que os profissionais da saúde
           enfrentam.</p>
-        <button type="button" class="btn">Fale com especialista</button>
+        <a href="#demo-modal" type="button" class="btn">Fale com especialista</a>
 
+        <!-- <div class="">
+          <a href="#demo-modal">Abrir Modal</a>
+        </div> -->
         <ul>
           <li> <strong class="gradient">+600 mil </strong> <br>Economizados</li>
           <li> <strong class="gradient">+400 mil </strong> <br>Restituídos</li>
@@ -324,6 +328,34 @@
     </div>
   </section>
 
+  <section>
+
+  </section>
+
+  <!-- Modal -->
+  <div id="demo-modal" class="modal">
+    <div class="modal__content">
+      <h2>Nós entraremos em contato com você!</h2>
+      <form id="myForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="celular">Celular:</label>
+        <input type="tel" id="celular" name="celular" required>
+
+        <!-- <input id="enviar" type="submit" value="Enviar"> -->
+      </form>
+      <button onclick='SubForm()'>Enviar</button>
+      <p class="success">Recebemos seu contato obrigado :)</p>
+      <p class="error">Tivemos um probleminha tente novamente :(</p>
+
+      <a href="#" class="modal__fechar">&times</a>
+    </div>
+  </div>
+
   <footer>
 
     <div class="container">
@@ -335,9 +367,11 @@
 
           <h3>FOLLOW US</h3>
           <ul>
-            <li><img src="img/001-facebook.svg" alt="facebook"></li>
-            <li><img src="img/003-twitter.svg" alt="twitter"></li>
-            <li><img src="img/004-instagram.svg" alt="instagram"></li>
+            <li><a href="https://www.facebook.com/descomplixsaude"><img src="img/001-facebook.svg" alt="facebook"></a>
+            </li>
+            <!-- <li><img src="img/003-twitter.svg" alt="twitter"></li> -->
+            <li><a href="https://www.instagram.com/descomplixsaude/"><img src="img/004-instagram.svg"
+                  alt="instagram"></a> </li>
           </ul>
         </div>
 
@@ -391,8 +425,40 @@
 
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script>
+    $('.success').hide()
+    $('.error').hide()
 
+    function SubForm() {
+
+      $.ajax({
+        url: "https://api.apispreadsheets.com/data/e0NJgxlQcdVr1uYf/",
+        type: "post",
+        data: $("#myForm").serializeArray(),
+        success: function () {
+          console.log("Form Data Submitted :)")
+          $('.success').show()
+
+          setTimeout(function () {
+            $('.success').hide()
+          }, 5000);
+        },
+        error: function () {
+          console.log("There was an error :(")
+          $('.error').show()
+
+          setTimeout(function () {
+            $('.error').hide()
+          }, 5000);
+        }
+      });
+    }
+
+   // $("#myButton").on("click", SubForm);
+  </script>
 </body>
 
 </html>
