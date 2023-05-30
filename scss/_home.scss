@@ -47,7 +47,7 @@
     .text {
         width: 100%;
         max-width: 60rem;
-        margin-top: 16px;
+        margin-top: $gutter*2;
 
         small {
             color: $purple;

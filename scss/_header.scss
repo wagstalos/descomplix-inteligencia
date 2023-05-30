@@ -23,7 +23,7 @@ header {
 
             li {
                 &:not(:first-child) {
-                    margin-left: 5.6rem;
+                    margin-left: 3.6rem;
                 }
 
                 a {
@@ -74,7 +74,8 @@ header {
             }
         }
     }
-    @include responsive(600px) {
+
+    @include responsive(900px) {
         .container {
             justify-content: center;
         }
@@ -82,6 +83,7 @@ header {
             display: none;
         }
     }
+
     @include responsive(480px) {
         height: 7rem;
         .logo {

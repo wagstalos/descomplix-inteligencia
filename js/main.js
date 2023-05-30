@@ -134,7 +134,7 @@ function gtm() {
 
 function scrollTarget(){
   $('a[href^="#"]').on('click', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão de clicar em um link
+    //event.preventDefault(); // Impede o comportamento padrão de clicar em um link
   
     var target = $(this.hash); // Obtem o elemento alvo da rolagem
     if (target.length) {
