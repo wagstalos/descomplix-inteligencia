@@ -14,6 +14,7 @@ function start() {
   $(".success").hide();
   $(".error").hide();
   $("#telefone").mask("(00) 90000-0000");
+  $("#demo-modal").show()
 }
 
 function swiperHome() {

@@ -316,7 +316,7 @@
 }
 
 .s-motives {
-    @include padding-section(2.9rem, 6.9rem);
+    @include padding-section(6.9rem, 6.9rem);
 
     .s-motives-title {
         @include sub-title();
@@ -469,7 +469,7 @@
                 margin: ($gutter * 2) 0;
             }
 
-            button {
+            a {
                 @include style-btn(5rem, $purple, #f6f6f6);
                 margin-top: 4.6rem;
                 color: $white;
@@ -672,7 +672,7 @@
 
 .modal {
     visibility: hidden;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     top: 0;
     right: 0;
