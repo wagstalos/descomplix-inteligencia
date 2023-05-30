@@ -17,14 +17,14 @@
   <meta name="description" content="Ferramenta para seu consultório pagar menos impostos!">
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MH0NE2SD63"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MH0NE2SD63"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-MH0NE2SD63');
-</script>
+    gtag('config', 'G-MH0NE2SD63');
+  </script>
 
 
   <!-- Primary Meta Tags -->
@@ -38,8 +38,7 @@
   <meta property="og:title" content="Descomplix inteligência financeira">
   <meta property="og:description"
     content="Profissionais da área médica que se uniram para oferecer soluções inovadoras e eficientes para lidar com os desafios tributários que os profissionais da saúde enfrentam.">
-  <meta property="og:image"
-    content="./img/preview.jpg">
+  <meta property="og:image" content="./img/preview.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
@@ -47,8 +46,7 @@
   <meta property="twitter:title" content="Descomplix inteligência financeira">
   <meta property="twitter:description"
     content="Profissionais da área médica que se uniram para oferecer soluções inovadoras e eficientes para lidar com os desafios tributários que os profissionais da saúde enfrentam.">
-  <meta property="twitter:image"
-    content="./img/preview.jpg">
+  <meta property="twitter:image" content="./img/preview.jpg">
 </head>
 
 <body>
@@ -64,13 +62,20 @@
       <nav>
         <ul>
           <li>
+            <a href="#todo"> O que fazemos?</a>
+          </li>
+          <li>
+            <a href="#faq">Faq</a>
+          </li>
+          <li>
             <a href="#help" class="btn-light">
-              <img src="img/icon-help.svg" alt="icon help" />
+              <!-- <img src="img/icon-help.svg" alt="icon help" /> -->
               Precisa de ajuda
             </a>
           </li>
           <li>
-            <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511932430232" type="button" class="btn btn-highlight">Fale conosco</a>
+            <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511932430232" type="button"
+              class="btn btn-highlight">Fale conosco</a>
           </li>
         </ul>
       </nav>
@@ -85,7 +90,7 @@
         <small>Somos uma equipe de especialistas em tributação</small>
         <h1>Inteligência Tributária na Área Médica!
         </h1>
-        <p>Profissionais da área médica que se uniram para oferecer
+        <p>Profissionais da área tributária que se uniram para oferecer
           soluções inovadoras e eficientes para lidar com os desafios tributários que os profissionais da saúde
           enfrentam.</p>
         <a href="#demo-modal" type="button" class="btn">Fale com especialista</a>
@@ -110,7 +115,7 @@
     <span>😍Menos taxas ⟶ 🤝🏼 Mais retorno ⟶ 🚵🏾 Mais tempo para você ⟶ 👊🏼Venha para Descomplix</span>
   </section>
 
-  <section class="s-resources">
+  <section class="s-resources" id="todo">
     <div class="container">
       <h2 data-aos="flip-left">"
         Reconhecemos que a complexidade das leis fiscais pode ser esmagadora e consumir <b>tempo valioso</b>, impedindo
@@ -263,8 +268,8 @@
     </div>
   </section>
 
-  <section class="s-faq" data-aos="fade-up" data-aos-offset="100" data-aos-duration="500" data-aos-easing="ease-in-out"
-    data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
+  <section class="s-faq" id="faq" data-aos="fade-up" data-aos-offset="100" data-aos-duration="500"
+    data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">
     <div class="container">
       <h2>Perguntas frequentes</h2>
       <div class="accordion">
@@ -341,10 +346,11 @@
         <input class="campo" class="telefone" type="text" id="telefone" name="celular" required>
         <!-- 
         <input id="enviar" type="submit" value="Enviar"> -->
-        <button id="btn-submit" onclick='SubForm()' disabled>Preencha os campos </button>
+
       </form>
       <!-- <button onclick='SubForm()'>Enviar</button> -->
       <p class="success">Recebemos seu contato obrigado :)</p>
+      <button id="btn-submit" onclick='SubForm()' disabled>Preencha os campos </button>
       <p class="error">Tivemos um probleminha tente novamente :(</p>
 
       <a href="#" class="modal__fechar">&times</a>
@@ -376,8 +382,8 @@
           <nav>
             <ul>
               <li><a href="">Quem somos</a></li>
-              <li><a href="">Contato</a></li>
-              <li><a href="">Faq</a> </li>
+              <li><a href="mailto:comercial@descomplix.com">Contato</a></li>
+              <li><a href="#faq">Faq</a> </li>
             </ul>
           </nav>
         </div>
@@ -385,11 +391,11 @@
         <div class="col-3">
           <h3 class="mb">Contatos</h3>
           <ul>
+            <li><a href="mailto:comercial@descomplix.com">comercial@descomplix.com</a> </li>
             <li class="d-flex">
               <img src="img/icon-tel.png" alt="telefone">
               <div>
                 <h4>Telefone</h4>
-                <h2 class="text-light">(11) 99999-8888</h2>
               </div>
             </li>
             <li class="d-flex">

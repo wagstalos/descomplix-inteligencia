@@ -1,11 +1,12 @@
 .s-hero {
     background: radial-gradient(circle, rgba(70, 278, 226, 0.2) 0%, rgba(181, 219, 239, 0.5) 76%);
-    margin: 6.9rem 6.9rem 0 6.9rem;
+    margin: 7.9rem 6.9rem 0 6.9rem;
     padding-top: 3.9rem;
     border-radius: 40px;
 
     .container {
         @include flex(row, flex-start, space-between);
+        position: relative;
     }
 
     .stamp {
@@ -46,7 +47,7 @@
     .text {
         width: 100%;
         max-width: 60rem;
-        margin-top: 50px;
+        margin-top: 16px;
 
         small {
             color: $purple;
@@ -73,7 +74,7 @@
         a {
             @include style-btn(5.4rem, $green, $white);
             margin: 0 auto;
-            margin-bottom: 8.6rem;
+            margin-bottom: 2.6rem;
             color: $white;
             -webkit-box-shadow: 3px 7px 19px -6px rgba(136, 189, 247, 1);
             -moz-box-shadow: 3px 7px 19px -6px rgba(136, 189, 247, 1);
@@ -100,6 +101,20 @@
         top: 0.4rem;
     }
 
+    @include responsive(1200px) {
+
+        .stamp{
+            display: none;
+        }
+        .text{
+            a{
+                margin-bottom: 2.6rem;
+                width: 300px;
+                text-align: center;
+            }
+        }
+    }
+
     @include responsive(991px) {
         .container {
             flex-direction: column;
@@ -114,7 +129,8 @@
         }
         .text {
             max-width: 100%;
-            margin-top: 3rem;
+            // margin-top: 1rem;
+            text-align: center;
             h1 {
                 text-align: center;
             }
@@ -140,12 +156,8 @@
                 display: flex;
                 text-align: center;
                 justify-content: center;
-            }
 
-            button {
-                margin: 0 auto;
-                margin-bottom: 4rem;
-                display: block;
+                // width: auto;
             }
         }
     }
@@ -156,7 +168,6 @@
         margin-top: 7rem;
 
         .text {
-            text-align: center;
             h1 {
                 font-size: 3.5rem;
             }
@@ -167,7 +178,7 @@
 
                 li {
                     margin-right: $gutter * 3;
-                    text-align: center;
+
                     &:last-child {
                         margin-right: 0;
                     }
@@ -176,8 +187,8 @@
 
             a {
                 display: flex;
-                text-align: center;
                 justify-content: center;
+                width: auto;
             }
         }
         .image {
@@ -234,7 +245,7 @@
 }
 
 .s-resources {
-    @include padding-section(3.9rem, 6.9rem);
+    @include padding-section(6.9rem, 6.9rem);
 
     .iframe-container {
         display: flex;
