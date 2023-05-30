@@ -47,7 +47,7 @@
     .text {
         width: 100%;
         max-width: 60rem;
-        margin-top: $gutter*2;
+        margin-top: $gutter * 2;
 
         small {
             color: $purple;
@@ -102,12 +102,11 @@
     }
 
     @include responsive(1200px) {
-
-        .stamp{
+        .stamp {
             display: none;
         }
-        .text{
-            a{
+        .text {
+            a {
                 margin-bottom: 2.6rem;
                 width: 300px;
                 text-align: center;
@@ -304,6 +303,7 @@
     .top {
         @include flex(row, center, space-between);
         margin-bottom: 5.3rem;
+
         h2 {
             font-weight: bold;
             font-size: 3.2rem;
@@ -346,7 +346,7 @@
     .top {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: normal;
 
         p {
             max-width: 40rem;
@@ -418,6 +418,9 @@
         .top {
             flex-direction: column;
             text-align: center;
+            p{
+                max-width: 100rem;
+            }
         }
         .tag {
             margin: 0 auto;
@@ -437,7 +440,7 @@
 }
 
 .s-time {
-    @include padding-section(15.9rem, 15.9rem);
+    @include padding-section(8.9rem, 15.9rem);
 
     .s-time__flex {
         @include flex(row, center, space-between);
@@ -550,6 +553,7 @@
         background-color: $white;
         border-radius: 20px;
         text-align: center;
+        height: 220px;
         margin-top: 50px;
         margin-left: $gutter;
         margin-right: $gutter;
