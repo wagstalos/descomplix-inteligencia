@@ -419,7 +419,7 @@
         .top {
             flex-direction: column;
             text-align: center;
-            p{
+            p {
                 max-width: 100rem;
             }
         }
@@ -542,6 +542,7 @@
         color: $purple;
         font-size: 1.6rem;
         margin-top: 3.9rem;
+        font-weight: 600;
     }
 
     .cards {
@@ -584,7 +585,7 @@
 }
 
 .s-faq {
-    @include padding-section(6.9rem, 6.9rem);
+    @include padding-section(8.9rem, 16.9rem);
 
     h2 {
         @include sub-title();
@@ -593,6 +594,8 @@
     }
 
     .accordion {
+        width: 80%;
+        margin: 0 auto;
         .accordion-item {
             border-bottom: 1px solid $lightgray;
             button[aria-expanded="true"] {
@@ -714,19 +717,6 @@
         max-width: 80%;
     }
 
-    label {
-        display: block;
-        margin: $gutter * 2 0 2px;
-    }
-
-    input {
-        width: 100%;
-        border: solid rgb(212, 212, 212) 1px;
-        padding: 8px;
-        border-radius: 5px;
-        background-color: #f7f7f7;
-    }
-
     button {
         @include style-btn(4.4rem, $green, $white);
         color: $white;
@@ -776,6 +766,71 @@
         font-weight: bold;
         font-size: 2.5rem;
         margin-right: 5px;
+    }
+}
+
+.s-form {
+    background: linear-gradient(90deg, rgba(227,220,255,1) 0%, rgba(227,255,248,0.8603816526610644) 59%);
+
+     .tag {
+        color: #3153e7;
+        font-size: 1.6rem;
+        margin-top: 3.9rem;
+        font-weight: 600;
+    }
+
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: $gutter*2;
+
+        .text{
+            width: 50%
+        }
+
+        form{
+            width: 40%;
+            padding:20px;
+            background-color: $white;
+            border-radius: 20px;
+
+            box-shadow: 3px 7px 19px -6px #d3e8ff;
+        }
+    }
+
+    @include padding-section(6.9rem, 6.9rem);
+
+    h2 {
+        @include sub-title();
+        margin-bottom: $gutter * 2;
+        text-align: center;
+    }
+
+    p{
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    button {
+        @include style-btn(4.4rem, $green, $white);
+        color: $white;
+        margin-top: $gutter * 4;
+        width: 100%;
+    }
+
+    @include responsive(991px) {
+        .content {
+            flex-direction: column-reverse;
+            .text{
+                width: 100%
+            }
+    
+            form{
+                width: 100%;
+            }
+        }
     }
 }
 

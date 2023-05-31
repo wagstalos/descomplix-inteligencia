@@ -79,7 +79,7 @@
             <a href="#faq">Faq</a>
           </li>
           <li>
-            <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511932430232" type="button" rel="nofollow"
+            <a href="#contactUs" type="button" rel="nofollow"
               class="btn btn-highlight">Fale conosco</a>
           </li>
         </ul>
@@ -287,7 +287,7 @@
       <div class="accordion">
         <div class="accordion-item">
           <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Análise e consultoria
-              tributária?</span><span class="icon" aria-hidden="true"></span></button>
+              tributária</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
             <p>Nossa equipe de especialistas está pronta para analisar sua situação tributária atual, identificar
               oportunidades de economia e fornecer recomendações estratégicas personalizadas para otimizar sua carga
@@ -296,7 +296,7 @@
         </div>
         <div class="accordion-item">
           <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Planejamento
-              tributário?</span><span class="icon" aria-hidden="true"></span></button>
+              tributário</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
             <p>Desenvolvemos estratégias inteligentes de planejamento tributário que são específicas para a área médica.
               Essas estratégias são projetadas para ajudá-lo a minimizar os encargos fiscais e maximizar sua capacidade
@@ -305,7 +305,7 @@
         </div>
         <div class="accordion-item">
           <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Atualizações
-              fiscais?</span><span class="icon" aria-hidden="true"></span></button>
+              fiscais</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
             <p>Mantenha-se atualizado com as últimas mudanças e atualizações no campo da tributação na área médica.
               Fornecemos informações e orientações claras sobre regulamentações fiscais em constante evolução,
@@ -314,14 +314,14 @@
         </div>
         <div class="accordion-item">
           <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Como fazemos para você
-              recuperar seu dinheiro?</span><span class="icon" aria-hidden="true"></span></button>
+              recuperar seu dinheiro</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
             <p>Trabalhamos com o conceito TAX BACK. Recuperação em dinheiro, de impostos pagos a mais nos últimos cinco
               anos.</p>
           </div>
         </div>
         <div class="accordion-item">
-          <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Garantia?</span><span
+          <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Garantia</span><span
               class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
             <p>Processo 100% administrativo, sem riscos para sua empresa e apenas com legislações e normativas já
@@ -347,28 +347,72 @@
   <div id="demo-modal" class="modal">
     <div class="modal__content">
       <h2>Nós entraremos em contato com você!</h2>
-      <form id="myForm">
-        <label for="nome">Nome:</label>
-        <input class="campo" type="text" id="nome" name="nome" required>
+      <form action="https://formspree.io/f/xvonneod" method="POST">
+        <label>
+          *Nome:
+          <input type="text" name="name" Required>
+        </label>
 
-        <label for="email">Email:</label>
-        <input class="campo" type="email" id="email" name="email" required>
-
-        <label for="telefone">Celular:</label>
+        <label for="telefone">*Celular:</label>
         <input class="campo" class="telefone" type="text" id="telefone" name="celular" required>
-        <!-- 
-        <input id="enviar" type="submit" value="Enviar"> -->
+        <label>
+          *Email:
+          <input type="email" name="email" required>
+        </label>
 
+        <small>* campos obrigatórios</small>
+        <div class="g-recaptcha" data-sitekey="6Ld2L1YmAAAAALW3Uzj1QGACEU17WbTwKLlt5KoR"></div>
+        <!-- your other form fields go here -->
+        <button type="submit">Enviar</button>
       </form>
-      <!-- <button onclick='SubForm()'>Enviar</button> -->
-      <p class="success">Recebemos seu contato obrigado :)</p>
-      <button id="btn-submit" onclick='SubForm()' disabled>Preencha os campos </button>
-      <p class="error">Tivemos um probleminha tente novamente :(</p>
 
       <a href="#" class="modal__fechar">&times</a>
     </div>
 
   </div>
+
+
+  <section class="s-form" id="contactUs">
+    <div class="container">
+      <p class="tag">Contato</p>
+      <h2>Chega de pagar taxas abusivas.</h2>
+      <p>Nossa equipe de especialistas está pronta para analisar sua situação tributária atual, identificar
+        oportunidades de economia e fornecer recomendações estratégicas personalizadas para otimizar sua carga
+        tributária.</p>
+      <div class="content">
+
+        <div class="text">
+           <img src="img/medica-feliz.png" alt="medica feliz por economizar tributos">
+        </div>
+
+        <form action="https://formspree.io/f/xvonneod" method="POST">
+          <label>
+            *Nome:
+            <input type="text" name="name" placeholder="Seu nome" Required>
+          </label>
+
+          <label for="telefone">*Celular:</label>
+          <input class="campo" class="telefone" type="text" id="celular" name="celular" placeholder="Seu telefone"
+            required>
+          <label>
+            *Email:
+            <input type="email" placeholder="email@example.com" name="email" required>
+          </label>
+          <label>
+            Mensagem:
+            <textarea name="message" rows="5"></textarea>
+          </label>
+          <div class="g-recaptcha" data-sitekey="6Ld2L1YmAAAAALW3Uzj1QGACEU17WbTwKLlt5KoR"></div>
+
+          <button type="submit">Enviar</button>
+
+        </form>
+
+      </div>
+
+
+    </div>
+  </section>
 
   <footer>
 
@@ -404,16 +448,16 @@
         <div class="col-3">
           <h3 class="mb">Contatos</h3>
           <ul>
-            <li><a href="mailto:comercial@descomplix.com">
+            <!-- <li><a href="mailto:comercial@descomplix.com">
                 <h2 class="text-light">comercial@descomplix.com</h2>
-              </a> </li>
-            <li class="d-flex">
+              </a> </li> -->
+            <!-- <li class="d-flex">
               <img src="img/icon-tel.png" alt="telefone">
               <div>
                 <h4>Telefone</h4>
                 <h2 class="text-light">(11) 93243-0232</h2>
               </div>
-            </li>
+            </li> -->
             <li class="d-flex">
               <img src="img/icon-horario.png" alt="telefone">
               <div>
@@ -446,9 +490,11 @@
   <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
   <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
   <script src="js/main.js"></script>
+
   <!-- <script>
     AOS.init();
   </script> -->
+  </script>
 </body>
 
 </html>

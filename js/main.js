@@ -14,6 +14,7 @@ function start() {
   $(".success").hide();
   $(".error").hide();
   $("#telefone").mask("(00) 90000-0000");
+  $("#celular").mask("(00) 90000-0000");
   $("#demo-modal").show();
 }
 
@@ -192,18 +193,61 @@ function SubForm() {
   });
 }
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('../sw.js')
-      .then(function(registration) {
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker
+      .register("../sw.js")
+      .then(function (registration) {
         // Registro do Service Worker bem-sucedido
-        console.log('Service Worker registrado com sucesso:', registration.scope);
+        console.log(
+          "Service Worker registrado com sucesso:",
+          registration.scope
+        );
       })
-      .catch(function(error) {
+      .catch(function (error) {
         // O registro do Service Worker falhou
-        console.log('Falha no registro do Service Worker:', error);
+        console.log("Falha no registro do Service Worker:", error);
       });
   });
+}
+
+
+function submitForm() {
+  var form = document.getElementById("my-form");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset();
+        } else {
+          response.json().then((data) => {
+            if (Object.hasOwn(data, "errors")) {
+              status.innerHTML = data["errors"]
+                .map((error) => error["message"])
+                .join(", ");
+            } else {
+              status.innerHTML =
+                "Oops! There was a problem submitting your form";
+            }
+          });
+        }
+      })
+      .catch((error) => {
+        status.innerHTML = "Oops! There was a problem submitting your form";
+      });
+  }
+  form.addEventListener("submit", handleSubmit);
 }
 
 const init = () => {
@@ -213,6 +257,7 @@ const init = () => {
   displayFullYear(".myDate");
   gtm();
   scrollTarget();
+  submitForm();
 };
 
 init();

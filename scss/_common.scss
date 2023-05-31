@@ -55,3 +55,38 @@ h2 {
     left: 0;
     width: 100%;
 }
+
+label {
+    display: block;
+    margin: $gutter * 2 0 2px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #cee2ec;
+    border-bottom: 1px solid #cee2ec;
+    background: rgba(0,0,0,0);
+    font-size: 14px;
+    color: #6b5d7b;
+    padding: 10px 0 10px 16px;
+    border-radius: 80px;
+    &:focus{
+        border: 1px solid $green;
+    }
+}
+
+textarea{
+    width: 100%;
+    border: 1px solid #cee2ec;
+    border-bottom: 1px solid #cee2ec;
+    background: rgba(0,0,0,0);
+    font-size: 14px;
+    color: #6b5d7b;
+    padding: 10px 0 10px 16px;
+    border-radius: 16px;
+    &:focus{
+        border: 1px solid $green;
+    }
+}
+
