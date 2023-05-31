@@ -770,6 +770,7 @@
 }
 
 .s-form {
+    @include padding-section(6.9rem, 6.9rem);
     background: linear-gradient(90deg, rgba(227,220,255,1) 0%, rgba(227,255,248,0.8603816526610644) 59%);
 
      .tag {
@@ -799,8 +800,6 @@
         }
     }
 
-    @include padding-section(6.9rem, 6.9rem);
-
     h2 {
         @include sub-title();
         margin-bottom: $gutter * 2;
@@ -821,6 +820,7 @@
     }
 
     @include responsive(991px) {
+        @include padding-section(2.9rem, 6.9rem);
         .content {
             flex-direction: column-reverse;
             .text{
@@ -830,6 +830,10 @@
             form{
                 width: 100%;
             }
+        }
+        
+        p{
+            width: 100%;
         }
     }
 }
