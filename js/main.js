@@ -16,6 +16,24 @@ function start() {
   $("#telefone").mask("(00) 90000-0000");
   $("#celular").mask("(00) 90000-0000");
   $("#demo-modal").show();
+
+  const btn = document.getElementById("menu-mob");
+  const menuMobile = document.getElementById("menu-mobile");
+
+  btn.addEventListener("click", () => {
+    menuMobile.classList.toggle("active");
+
+    // const closeMenuMobile = document.getElementById("close");
+
+    // if (menuMobile.classList.contains("active")) {
+    //   // fazer algo se tiver a classe "active"
+    //   alert("tem");
+    //   closeMenuMobile.classList.add("menu-visivel");
+    // } else {
+    //   // fazer algo se não tiver a classe "active"
+    //   alert("nao tem");
+    // }
+  });
 }
 
 function swiperHome() {

@@ -5,7 +5,7 @@ header {
     width: 100%;
     height: 7.9rem;
     background: rgba(255, 255, 255, 0.35);
-    box-shadow: 0 0 30px 0 rgba(0,0,0,.05);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(13.5px);
     -webkit-backdrop-filter: blur(3.5px);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -32,9 +32,9 @@ header {
                     color: $blue-dark;
                     font-size: 1.6rem;
                     line-height: 1.9rem;
-                    transition: all .5s;
+                    transition: all 0.5s;
 
-                    &:hover{
+                    &:hover {
                         color: $green;
                     }
 
@@ -43,7 +43,7 @@ header {
                     }
                 }
 
-                .btn-highlight  {
+                .btn-highlight {
                     display: flex;
                     align-items: center;
                     color: $white;
@@ -75,12 +75,81 @@ header {
         }
     }
 
+    .icon-menu-mobile {
+        display: none;
+        .icon-tabler-menu {
+            margin: 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .menu-mobile {
+            flex-direction: column;
+            position: fixed;
+
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: $white;
+
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+            z-index: 10;
+        }
+
+        .active {
+            display: block;
+            animation-name: fadein;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        #close {
+            display: block;
+            margin: 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
     @include responsive(900px) {
         .container {
             justify-content: center;
         }
-        nav {
+
+        .menu-desk {
             display: none;
+        }
+
+        .icon-menu-mobile {
+            display: block;
+            cursor: pointer;
+        }
+
+        .menu-mobile {
+            ul {
+                flex-direction: column;
+                text-align: center;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+
+                li {
+                    // margin-right: 0;
+                    margin: 16px;
+
+                    a {
+                        font-size: 22px;
+                    }
+                }
+            }
         }
     }
 

@@ -59,6 +59,7 @@ h2 {
 label {
     display: block;
     margin: $gutter * 2 0 2px;
+    font-size: 1.4rem;
 }
 
 input {
@@ -66,27 +67,26 @@ input {
     height: 40px;
     border: 1px solid #cee2ec;
     border-bottom: 1px solid #cee2ec;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     font-size: 14px;
     color: #6b5d7b;
     padding: 10px 0 10px 16px;
     border-radius: 80px;
-    &:focus{
+    &:focus {
         border: 1px solid $green;
     }
 }
 
-textarea{
+textarea {
     width: 100%;
     border: 1px solid #cee2ec;
     border-bottom: 1px solid #cee2ec;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     font-size: 14px;
     color: #6b5d7b;
     padding: 10px 0 10px 16px;
     border-radius: 16px;
-    &:focus{
+    &:focus {
         border: 1px solid $green;
     }
 }
-
