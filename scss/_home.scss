@@ -87,6 +87,9 @@
             color: $blue-dark;
 
             li {
+                background-color: $white;
+                padding: 5px 16px;
+                border-radius: 9px;
                 strong {
                     font-size: 3rem;
                 }
@@ -771,28 +774,28 @@
 
 .s-form {
     @include padding-section(6.9rem, 6.9rem);
-    background: linear-gradient(90deg, rgba(227,220,255,1) 0%, rgba(227,255,248,0.8603816526610644) 59%);
+    background: linear-gradient(90deg, rgba(227, 220, 255, 1) 0%, rgba(227, 255, 248, 0.8603816526610644) 59%);
 
-     .tag {
+    .tag {
         color: #3153e7;
         font-size: 1.6rem;
         margin-top: 3.9rem;
         font-weight: 600;
     }
 
-    .content{
+    .content {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: $gutter*2;
+        margin-top: $gutter * 2;
 
-        .text{
-            width: 50%
+        .text {
+            width: 50%;
         }
 
-        form{
+        form {
             width: 40%;
-            padding:20px;
+            padding: 20px;
             background-color: $white;
             border-radius: 20px;
 
@@ -806,7 +809,7 @@
         text-align: center;
     }
 
-    p{
+    p {
         text-align: center;
         width: 80%;
         margin: 0 auto;
@@ -823,16 +826,16 @@
         @include padding-section(2.9rem, 6.9rem);
         .content {
             flex-direction: column-reverse;
-            .text{
-                width: 100%
+            .text {
+                width: 100%;
             }
-    
-            form{
+
+            form {
                 width: 100%;
             }
         }
-        
-        p{
+
+        p {
             width: 100%;
         }
     }

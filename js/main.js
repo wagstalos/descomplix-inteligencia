@@ -211,7 +211,6 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-
 function submitForm() {
   var form = document.getElementById("my-form");
 
@@ -249,6 +248,32 @@ function submitForm() {
   }
   form.addEventListener("submit", handleSubmit);
 }
+
+function counterUp() {
+  var startValue = 0; // Valor inicial do contador
+  var endValue = 526789; // Valor final do contador
+  var duration = 3000; // Duração total da animação em milissegundos
+  var interval = 30; // Intervalo de atualização em milissegundos
+  var current = startValue;
+  var increment = (endValue - startValue) * (interval / duration);
+
+  var intervalId = setInterval(function () {
+    current += increment;
+    var formattedValue = current.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    });
+
+    $("#contador").text(formattedValue);
+
+    if (current >= endValue) {
+      clearInterval(intervalId);
+    }
+  }, interval);
+}
+
+// Chame a função para iniciar o contador
+counterUp();
 
 const init = () => {
   start();
