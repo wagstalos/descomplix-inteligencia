@@ -192,6 +192,19 @@ function SubForm() {
   });
 }
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('../sw.js')
+      .then(function(registration) {
+        // Registro do Service Worker bem-sucedido
+        console.log('Service Worker registrado com sucesso:', registration.scope);
+      })
+      .catch(function(error) {
+        // O registro do Service Worker falhou
+        console.log('Falha no registro do Service Worker:', error);
+      });
+  });
+}
 
 const init = () => {
   start();
