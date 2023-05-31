@@ -5,13 +5,16 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#46f8a3;" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.min.css?v=4" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
   <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
   <link href="img/selo.svg" rel="icon" sizes="200x200">
+  <link rel="manifest" href="/manifest.json">
   <title>Descomplix inteligência tributária</title>
   <meta name="title" content="Descomplix - iteligência tributária">
   <meta name="description" content="Ferramenta para seu consultório pagar menos impostos!">
@@ -76,7 +79,7 @@
             <a href="#faq">Faq</a>
           </li>
           <li>
-            <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511932430232" type="button"
+            <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511932430232" type="button" rel="nofollow"
               class="btn btn-highlight">Fale conosco</a>
           </li>
         </ul>
@@ -108,7 +111,7 @@
       </div>
 
       <div class="image">
-        <img src="img/hero-personagem.png" alt="Um boneco 3d segurando um computador" loading="lazy" />
+        <img src="img/hero-personagem.png" alt="Um médico apontando os benefícios da descomplix" loading="lazy" />
       </div>
     </div>
   </section>
@@ -192,7 +195,7 @@
       <div class="s-time__flex">
         <div class="s-time__img">
           <div class="s-time__img--box-azul"></div>
-          <img src="img/estudos.jpg" alt="Uma mulher sentada usando seu laptop" loading="lazy">
+          <img src="img/estudos.jpg" alt="Um médico sorrindo" loading="lazy">
         </div>
 
         <div class="s-time__text">
@@ -201,7 +204,7 @@
           <p>Estamos comprometidos em simplificar sua vida tributária e ajudá-lo a alcançar uma estratégia fiscal sólida
             e eficiente. Navegue pelo nosso site para descobrir como podemos ajudar você a ter sucesso em sua prática
             médica, enquanto mantém uma conformidade tributária adequada.</p>
-          <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511932430232">Fale com nossa equipe</a>
+          <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511932430232" rel="nofollow">Fale com nossa equipe</a>
         </div>
 
       </div>
@@ -225,7 +228,7 @@
             <div class="card">
               <img src="img/medico-avatar.png" alt="foto do médico">
               <h3>Vera Souza</h3>
-              
+
               <span>⭐⭐⭐⭐⭐</span>
               <p>Muitos anos trabalhando juntos ,excelente profissional ,dedicado sempre prontos a solucionar problemas
                 Parabéns pela dedicação.</p>
@@ -238,8 +241,8 @@
               <h3>Marcelo Antonini</h3>
               <span>⭐⭐⭐⭐⭐</span>
 
-                <p>Sou cliente a mais de 15 anos, serviços prestados com qualidade, dedicação e excelência no assunto.
-                </p>
+              <p>Sou cliente a mais de 15 anos, serviços prestados com qualidade, dedicação e excelência no assunto.
+              </p>
 
             </div>
           </div>
@@ -249,7 +252,7 @@
               <h3>Clínica Dr.Carlos Fattori</h3>
               <span>⭐⭐⭐⭐⭐</span>
               <p>Eficiência e atenção. trabalho há anos com esta empresa.</p>
-             
+
             </div>
           </div>
 
@@ -313,7 +316,7 @@
           <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Como fazemos para você
               recuperar seu dinheiro?</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
-            <p>Trabalhamos com o conceito TAX BACK. Recuperação, em dinheiro, de impostos pagos a mais nos últimos cinco
+            <p>Trabalhamos com o conceito TAX BACK. Recuperação em dinheiro, de impostos pagos a mais nos últimos cinco
               anos.</p>
           </div>
         </div>
@@ -355,7 +358,7 @@
         <input class="campo" class="telefone" type="text" id="telefone" name="celular" required>
         <!-- 
         <input id="enviar" type="submit" value="Enviar"> -->
-
+        <div class="g-recaptcha" data-sitekey="6LeZ01UmAAAAAMWaDVMUtP-sjR2N06prAGopsaAP"></div>
       </form>
       <!-- <button onclick='SubForm()'>Enviar</button> -->
       <p class="success">Recebemos seu contato obrigado :)</p>
@@ -365,6 +368,7 @@
       <a href="#" class="modal__fechar">&times</a>
     </div>
   </div>
+
 
   <footer>
 
@@ -425,7 +429,7 @@
 
       <h3 class="mt">© Todos os direitos reservados. <span class="myDate"></span></h3>
     </div>
-    <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511932430232" class="btn-whats">
+    <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511932430232" class="btn-whats" rel="nofollow">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="24" height="24"
         viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>

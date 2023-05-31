@@ -14,7 +14,7 @@ function start() {
   $(".success").hide();
   $(".error").hide();
   $("#telefone").mask("(00) 90000-0000");
-  $("#demo-modal").show()
+  $("#demo-modal").show();
 }
 
 function swiperHome() {
@@ -132,15 +132,18 @@ function gtm() {
   btnWhats[0].addEventListener("click", gtmClickBtnWhats);
 }
 
-function scrollTarget(){
-  $('a[href^="#"]').on('click', function(event) {
+function scrollTarget() {
+  $('a[href^="#"]').on("click", function (event) {
     //event.preventDefault(); // Impede o comportamento padrão de clicar em um link
-  
+
     var target = $(this.hash); // Obtem o elemento alvo da rolagem
     if (target.length) {
-      $('html, body').animate({
-        scrollTop: target.offset().top // Anima a rolagem até o elemento alvo
-      }, 800); // Tempo de duração da animação em milissegundos
+      $("html, body").animate(
+        {
+          scrollTop: target.offset().top, // Anima a rolagem até o elemento alvo
+        },
+        800
+      ); // Tempo de duração da animação em milissegundos
     }
   });
 }
@@ -189,13 +192,14 @@ function SubForm() {
   });
 }
 
+
 const init = () => {
   start();
   swiperHome();
   accordionHome();
   displayFullYear(".myDate");
   gtm();
-  scrollTarget()
+  scrollTarget();
 };
 
 init();

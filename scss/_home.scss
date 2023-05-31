@@ -167,6 +167,7 @@
         margin-top: 7rem;
 
         .text {
+            margin-top: $gutter * 6;
             h1 {
                 font-size: 3.5rem;
             }
@@ -534,7 +535,6 @@
     text-align: center;
     .container {
         padding: 3rem;
-        // background-color: $blue-light;
         border-radius: 40px;
     }
 
@@ -553,7 +553,7 @@
         background-color: $white;
         border-radius: 20px;
         text-align: center;
-        height: 220px;
+        height: 208px;
         margin-top: 50px;
         margin-left: $gutter;
         margin-right: $gutter;
@@ -569,7 +569,7 @@
         p {
             margin-top: $gutter;
             color: $gray-01;
-            padding: $gutter * 2;
+            padding: $gutter;
         }
     }
     h2 {
