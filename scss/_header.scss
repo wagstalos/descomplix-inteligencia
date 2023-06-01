@@ -83,6 +83,7 @@ header {
             top: 0;
             right: 0;
         }
+
         .menu-mobile {
             flex-direction: column;
             position: fixed;
@@ -119,6 +120,16 @@ header {
     @include responsive(900px) {
         .container {
             justify-content: center;
+        }
+
+        nav {
+            ul {
+                li {
+                    &:not(:first-child) {
+                        margin-left: 0;
+                    }
+                }
+            }
         }
 
         .menu-desk {

@@ -590,6 +590,14 @@
 .s-faq {
     @include padding-section(8.9rem, 16.9rem);
 
+    .tag {
+        color: $purple;
+        font-size: 1.6rem;
+        margin-top: 3.9rem;
+        font-weight: 600;
+        text-align: center
+    }
+
     h2 {
         @include sub-title();
         margin-bottom: $gutter * 2;
@@ -683,6 +691,12 @@
             overflow: hidden;
             transition: opacity 200ms linear, max-height 200ms linear;
             will-change: opacity, max-height;
+        }
+    }
+
+    @include responsive(600px) {
+        .accordion {
+            width: 100%;
         }
     }
 }

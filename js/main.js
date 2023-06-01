@@ -22,17 +22,6 @@ function start() {
 
   btn.addEventListener("click", () => {
     menuMobile.classList.toggle("active");
-
-    // const closeMenuMobile = document.getElementById("close");
-
-    // if (menuMobile.classList.contains("active")) {
-    //   // fazer algo se tiver a classe "active"
-    //   alert("tem");
-    //   closeMenuMobile.classList.add("menu-visivel");
-    // } else {
-    //   // fazer algo se não tiver a classe "active"
-    //   alert("nao tem");
-    // }
   });
 }
 
