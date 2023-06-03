@@ -111,13 +111,12 @@
         .text {
             a {
                 margin-bottom: 2.6rem;
-                width: 300px;
                 text-align: center;
             }
         }
     }
 
-    @include responsive(991px) {
+    @include responsive(1134px) {
         .container {
             flex-direction: column;
         }
@@ -129,9 +128,9 @@
         .stamp {
             display: none;
         }
+
         .text {
             max-width: 100%;
-            // margin-top: 1rem;
             text-align: center;
             h1 {
                 text-align: center;
@@ -152,14 +151,6 @@
                         margin-right: 0;
                     }
                 }
-            }
-
-            a {
-                display: flex;
-                text-align: center;
-                justify-content: center;
-
-                // width: auto;
             }
         }
     }
@@ -595,7 +586,7 @@
         font-size: 1.6rem;
         margin-top: 3.9rem;
         font-weight: 600;
-        text-align: center
+        text-align: center;
     }
 
     h2 {

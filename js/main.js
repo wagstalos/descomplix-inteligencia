@@ -87,57 +87,25 @@ function displayFullYear(element) {
 }
 
 function gtm() {
-  let btn = document.getElementsByClassName("btn");
-  let btnWhats = document.getElementsByClassName("btn-whats");
+  let btnEconomizar = document.getElementsByClassName("btn-gtm-economizar");
+  let btnFaleConosco = document.getElementsByClassName("btn-gtm-conosco");
+  // let btnWhats = document.getElementsByClassName("btn-whats");
 
   function gtmClickBtnWhats() {
     gtag("event", "whatsapp", { debug_mode: true });
   }
 
   function gtmClickBtn() {
-    gtag("event", "click_aula_gratis", { debug_mode: true });
+    gtag("event", "click_quero_economizar", { debug_mode: true });
   }
 
-  function gtmClickBtnPurple() {
-    dataLayer.push({ ecommerce: null }); // Clear the previous ecommerce object.
-    dataLayer.push({
-      event: "purchase",
-      ecommerce: {
-        transaction_id: "T12345",
-        affiliation: "Online Store",
-        value: "59.89",
-        tax: "4.90",
-        shipping: "5.99",
-        currency: "EUR",
-        coupon: "SUMMER_SALE",
-        items: [
-          {
-            item_name: "Triblend Android T-Shirt",
-            item_id: "12345",
-            price: "15.25",
-            item_brand: "Google",
-            item_category: "Apparel",
-            item_variant: "Gray",
-            quantity: 1,
-          },
-          {
-            item_name: "Donut Friday Scented T-Shirt",
-            item_id: "67890",
-            price: 33.75,
-            item_brand: "Google",
-            item_category: "Apparel",
-            item_variant: "Black",
-            quantity: 1,
-          },
-        ],
-      },
-      debug_mode: true,
-    });
+  function gtmClickBtnConosco() {
+    gtag("event", "click_fale_conosco", { debug_mode: true });
   }
 
-  btn[0].addEventListener("click", gtmClickBtnPurple);
-  btn[1].addEventListener("click", gtmClickBtn);
-  btnWhats[0].addEventListener("click", gtmClickBtnWhats);
+  btnFaleConosco[0].addEventListener("click", gtmClickBtnConosco);
+  btnEconomizar[0].addEventListener("click", gtmClickBtn);
+  // btnWhats[0].addEventListener("click", gtmClickBtnWhats);
 }
 
 function scrollTarget() {
