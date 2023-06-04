@@ -1,5 +1,7 @@
 .s-hero {
-    background: radial-gradient(circle, rgba(70, 278, 226, 0.2) 0%, rgba(181, 219, 239, 0.5) 76%);
+    // background: radial-gradient(circle, rgba(70, 278, 226, 0.2) 0%, rgba(181, 219, 239, 0.5) 76%);
+    background: C0D8FF;
+    background: radial-gradient(64.63% 111.98% at 52.76% 53.82%, #c9fff7 0%, #d6e6ff 100%);
     margin: 7.9rem 6.9rem 0 6.9rem;
     padding-top: 3.9rem;
     border-radius: 40px;
@@ -159,6 +161,13 @@
         padding-top: 2.5rem;
         margin: 0.9rem;
         margin-top: 7rem;
+
+        .stamp {
+            display: block;
+            width: 60px;
+            top: 2%;
+            left: 18%;
+        }
 
         .text {
             margin-top: $gutter * 6;
@@ -527,6 +536,31 @@
     background-color: $blue-light;
     background: radial-gradient(circle, rgba(181, 219, 239, 08) 0%, rgba(70, 255, 226, 0.2) 86%);
     text-align: center;
+    position: relative;
+
+    .cube-star {
+        position: absolute;
+        left: 18px;
+        bottom: -14px;
+    }
+
+    .levitating-element {
+        animation: levitate 4s ease-in-out infinite;
+      }
+
+    @keyframes levitate {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    
+
     .container {
         padding: 3rem;
         border-radius: 40px;
