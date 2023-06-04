@@ -1,0 +1,47 @@
+.s-politica {
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#e3dcff),
+        color-stop(59%, rgba(227, 255, 248, 0.860382))
+    );
+    background: linear-gradient(90deg, #e3dcff 0%, rgba(227, 255, 248, 0.860382) 59%);
+
+    h1 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: $blue-dark;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    img {
+        display: flex;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    p {
+        &:last-child {
+            margin-bottom: 80px;
+        }
+    }
+
+    .btn-back {
+        font-size: 1.6rem;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.35);
+        -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(13.5px);
+        font-weight: 600;
+
+        position: absolute;
+        margin-top: 20px;
+    }
+}
