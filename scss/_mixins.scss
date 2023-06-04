@@ -13,10 +13,10 @@
 
 @mixin style-btn($height, $bg, $colorText) {
     display: inline-block;
-    height: $height;
+    // height: $height;
     line-height: $height;
     background-color: $bg;
-    border-radius: 50px;
+    border-radius: 20px;
     padding: 0px 5rem;
     font-weight: bold;
     font-size: 1.8rem;

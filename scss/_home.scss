@@ -3,12 +3,16 @@
     background: C0D8FF;
     background: radial-gradient(64.63% 111.98% at 52.76% 53.82%, #c9fff7 0%, #d6e6ff 100%);
     margin: 7.9rem 6.9rem 0 6.9rem;
-    padding-top: 3.9rem;
+    // padding-top: 3.9rem;
     border-radius: 40px;
 
     .container {
-        @include flex(row, flex-start, space-between);
+        @include flex(row, center, space-between);
         position: relative;
+    }
+
+    .d-flex {
+        justify-content: space-between;
     }
 
     .stamp {
@@ -54,6 +58,7 @@
         small {
             color: $purple;
             font-size: 1.4rem;
+            font-weight: 600;
         }
 
         h1 {
@@ -70,28 +75,39 @@
             line-height: 150%;
             color: $blue-dark;
             max-width: 58rem;
-            margin-bottom: 3.2rem;
+            margin-bottom: 5.2rem;
         }
 
         a {
-            @include style-btn(5.4rem, $green, $white);
-            margin: 0 auto;
+            @include style-btn(6.4rem, $green, $white);
+            border-radius: 10px;
+            padding: 0px 5rem;
             margin-bottom: 2.6rem;
             color: $blue-dark;
             -webkit-box-shadow: 3px 7px 19px -6px rgba(136, 189, 247, 1);
             -moz-box-shadow: 3px 7px 19px -6px rgba(136, 189, 247, 1);
             box-shadow: 3px 7px 19px -6px rgba(136, 189, 247, 1);
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                margin-left: $gutter;
+            }
         }
 
         ul {
             display: flex;
             font-size: 1.6rem;
             color: $blue-dark;
+            width: 100%;
 
             li {
-                background-color: $white;
-                padding: 5px 16px;
+                // padding: 5px 16px;
                 border-radius: 9px;
+                margin-left: $gutter * 2;
                 strong {
                     font-size: 3rem;
                 }
@@ -112,6 +128,8 @@
         }
         .text {
             a {
+                width: 300px;
+                margin: 0 auto;
                 margin-bottom: 2.6rem;
                 text-align: center;
             }
@@ -119,7 +137,8 @@
     }
 
     @include responsive(1134px) {
-        .container {
+        .container,
+        .d-flex {
             flex-direction: column;
         }
 
@@ -541,25 +560,24 @@
     .cube-star {
         position: absolute;
         left: 18px;
-        bottom: -14px;
+        bottom: -54px;
     }
 
     .levitating-element {
         animation: levitate 4s ease-in-out infinite;
-      }
+    }
 
     @keyframes levitate {
         0% {
-          transform: translateY(0);
+            transform: translateY(0);
         }
         50% {
-          transform: translateY(-20px);
+            transform: translateY(-20px);
         }
         100% {
-          transform: translateY(0);
+            transform: translateY(0);
         }
-      }
-    
+    }
 
     .container {
         padding: 3rem;
