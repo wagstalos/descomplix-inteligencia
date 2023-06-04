@@ -90,3 +90,15 @@ textarea {
         border: 1px solid $green;
     }
 }
+
+
+.check{
+    display: flex;
+    align-items: center;
+
+    input{
+        width: auto;
+        margin-right: 5px;
+    }
+}
+
