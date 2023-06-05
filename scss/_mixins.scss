@@ -16,12 +16,14 @@
     // height: $height;
     line-height: $height;
     background-color: $bg;
-    border-radius: 20px;
-    padding: 0px 5rem;
+    border-radius: 10px;
+    padding: 0 5rem;
     font-weight: bold;
     font-size: 1.8rem;
     cursor: pointer;
     transition: all 0.3s;
+
+    box-shadow: 3px 7px 19px -6px #88bdf7;
     &:hover {
         background-color: $colorText;
         color: $bg;
