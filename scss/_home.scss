@@ -317,6 +317,23 @@
         }
     }
 
+    .btn-content {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .btn-iframe {
+        @include style-btn(5rem, $purple, $green);
+        margin-top: 2.6rem;
+        color: $white;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
     h2 {
         font-weight: 400;
         font-size: 2.2rem;
@@ -642,9 +659,12 @@
         }
 
         p {
-            margin-top: $gutter;
+            // margin-top: $gutter;
             color: $gray-01;
             padding: $gutter;
+            height: 132px;
+            display: flex;
+            align-items: center;
         }
     }
     h2 {
@@ -1009,6 +1029,13 @@ footer {
                     color: $green;
                 }
             }
+        }
+    }
+
+    .d-flex-j-content {
+        justify-content: space-between;
+        a {
+            color: $green;
         }
     }
 
