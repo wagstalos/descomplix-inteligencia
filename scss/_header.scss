@@ -46,21 +46,20 @@ header {
                 .btn-highlight {
                     display: flex;
                     align-items: center;
-                    color: $white;
+                    color: $green;
                     font-size: 1.6rem;
                     line-height: 1.9rem;
                     cursor: pointer;
                     padding: 15px 32px;
                     border-radius: 10px;
-                    background-color: $green;
                     transition: background-color 0.5s ease;
                     border: 1px solid $green;
 
-                    box-shadow: 3px 7px 19px -6px #88bdf7;
+                    // box-shadow: 3px 7px 19px -6px #88bdf7;
 
                     &:hover {
-                        color: $green;
-                        background-color: $white;
+                        color: $white;
+                        background-color: $green;
                     }
 
                     span {
@@ -129,6 +128,10 @@ header {
                 li {
                     &:not(:first-child) {
                         margin-left: 0;
+                        margin-right: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
                     }
                 }
             }
