@@ -389,7 +389,7 @@
 }
 
 .s-motives {
-    @include padding-section(6.9rem, 6.9rem);
+    @include padding-section(10.9rem, 10.9rem);
 
     .s-motives-title {
         @include sub-title();
@@ -502,7 +502,7 @@
 }
 
 .s-time {
-    @include padding-section(8.9rem, 15.9rem);
+    @include padding-section(10.9rem, 19.9rem);
 
     .s-time__flex {
         @include flex(row, center, space-between);
